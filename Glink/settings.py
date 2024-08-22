@@ -80,8 +80,8 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://genok-fe.vercel.app"
-    # "http://localhost:3001"
+    "https://genok-fe.vercel.app",
+    "http://localhost:3001"
 ]
 
 ROOT_URLCONF = 'Glink.urls'

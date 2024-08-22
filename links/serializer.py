@@ -7,7 +7,8 @@ class LinksSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Links
-        fields = [ 'label',  'link']
+        fields = ['id', 'label', 'link']
+        read_only_fields = ['id']
 
     def create(self, validated_data):
         label = validated_data.pop('label')
