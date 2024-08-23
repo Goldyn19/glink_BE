@@ -110,8 +110,12 @@ WSGI_APPLICATION = 'Glink.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'initial_db',
+        'USER': 'postgres',
+        'PASSWORD': 'Uk5FWmGgGbju289',
+        'HOST': 'glink-db.c92gkq24k2ry.eu-north-1.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
