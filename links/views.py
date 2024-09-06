@@ -32,3 +32,12 @@ class UserLinksListView(generics.ListAPIView):
 
     def get_queryset(self):
         return Links.objects.filter(created_by=self.request.user)
+
+
+class SharedUserLinksListView(generics.ListAPIView):
+    serializer_class = LinksSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def get_queryset(self):
+        user_id = self.kwargs.get('user_id')
+        return Links.objects.filter(created_by=user_id)
