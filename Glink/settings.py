@@ -80,7 +80,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://glink-eight.vercel.app/",
+    "https://glink-eight.vercel.app",
     "http://localhost:3001"
 ]
 
