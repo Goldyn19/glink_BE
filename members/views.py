@@ -60,6 +60,7 @@ class SignUpView(generics.GenericAPIView):
                     'data': serializer.data
                 }
                 return Response(data=response, status=status.HTTP_201_CREATED)
+            logger.error(serializer.errors)
             return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         except Exception as e:
